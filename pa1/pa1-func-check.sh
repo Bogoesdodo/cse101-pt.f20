@@ -8,9 +8,9 @@ let MAXPTS=$NUMTESTS*$PNTSPERTEST
 if [ ! -e backup ]; then
    echo "WARNING: a backup has been created for you in the \"backup\" folder"
    mkdir backup
-   
-   cp *.c *.h Makefile backup   # copy all files of importance into backup
 fi
+
+cp *.c *.h Makefile backup   # copy all files of importance into backup
 
 for NUM in $(seq 1 $NUMTESTS); do
    curl $SRCDIR/infile$NUM.txt > infile$NUM.txt

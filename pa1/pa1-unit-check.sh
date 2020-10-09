@@ -5,9 +5,9 @@ SRCDIR=https://raw.githubusercontent.com/houi-lin/cse101-pt.f20/master/pa1
 if [ ! -e backup ]; then
    echo "WARNING: a backup has been created for you in the \"backup\" folder"
    mkdir backup
-   
-   cp *.c *.h Makefile backup   # copy all files of importance into backup
 fi
+
+cp *.c *.h Makefile backup   # copy all files of importance into backup
 
 curl $SRCDIR/ModelListTest.c > ModelListTest.c
 
