@@ -57,6 +57,7 @@ for NUM in $(seq 1 $NUMTESTS); do
    echo "=========="
    cat valgrind-out$NUM.txt
    echo "=========="
+   read garbage
 done
 
 echo ""
