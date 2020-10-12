@@ -30,7 +30,7 @@ echo "Press enter to continue"
 read verbose
 for NUM in $(seq 1 $NUMTESTS); do
   rm -f outfile$NUM.txt
-  timeout 5 valgrind --leak-check=full -v Lex infile$NUM.txt outfile$NUM.txt &> valgrind-out$NUM.txt
+  timeout 5 valgrind --leak-check=full -v ./Lex infile$NUM.txt outfile$NUM.txt &> valgrind-out$NUM.txt
   diff -bBwu outfile$NUM.txt model-outfile$NUM.txt &> diff$NUM.txt >> diff$NUM.txt
   echo "Lex Test $NUM:"
   echo "=========="
